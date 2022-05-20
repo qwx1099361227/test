@@ -1,0 +1,33 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" draggable='true'></div>
+    <script>
+        let box = document.querySelector('.box')
+        // 绑定dragstart事件
+        box.addEventListener('dragstart', function() {
+            console.log('拖拽开始了');
+        })
+        // 绑定drag事件
+        box.addEventListener('drag', function() {
+            console.log('元素被拖动');
+        })
+        // 绑定dragend事件
+        box.addEventListener('dragend', function() {
+            console.log('拖拽结束');
+        })
+    </script>
+</body>
+</html>
